@@ -1,6 +1,8 @@
 package com.cinfiny.demo;
 
 import com.cinfiny.demo.controllers.AuthenticationController;
+import com.cinfiny.demo.models.Designer;
+import com.cinfiny.demo.models.Installer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -40,10 +42,16 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
         }
 
         HttpSession session = request.getSession();
-        User user = authenticationController.getUserFromSession(session);
+        Designer designer = authenticationController.getDesignerFromSession(session);
+        Installer installer = authenticationController.getInstallerFromSession(session);
 
-        // the user is logged in
-        if (user != null) {
+        // the designer is logged in
+        if (designer != null) {
+            return true;
+        }
+
+        // the installer is logged in
+        if (installer != null) {
             return true;
         }
 

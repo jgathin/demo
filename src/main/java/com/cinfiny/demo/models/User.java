@@ -1,6 +1,8 @@
 package com.cinfiny.demo.models;
 
-public class User {
+import com.cinfiny.demo.AbstractEntity;
+
+public class User extends AbstractEntity {
 
     private String employeeNumber;
 
