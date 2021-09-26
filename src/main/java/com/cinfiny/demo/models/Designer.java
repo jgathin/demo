@@ -34,4 +34,8 @@ public class Designer extends User {
     public void setProjects(List<Project> projects) {
         this.projects = projects;
     }
+
+    public boolean isMatchingPassword(String password) {
+        return encoder.matches(password, pwHash);
+    }
 }

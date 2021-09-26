@@ -22,4 +22,8 @@ public class Installer extends User {
     public void setPwHash(String pwHash) {
         this.pwHash = pwHash;
     }
+
+    public boolean isMatchingPassword(String password) {
+        return encoder.matches(password, pwHash);
+    }
 }

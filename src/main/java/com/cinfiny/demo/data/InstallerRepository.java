@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface InstallerRepository extends CrudRepository<Installer, Integer> {
 
-    Installer findByEmployee(String employeeNumber);
+    Installer findByEmployeeNumber(String employeeNumber);
 
     Installer findByEmail(String email);
 

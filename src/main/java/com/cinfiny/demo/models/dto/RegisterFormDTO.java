@@ -1,5 +1,8 @@
 package com.cinfiny.demo.models.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RegisterFormDTO extends LoginFormDTO {
 
     private String verifyPassword;
@@ -21,4 +24,5 @@ public class RegisterFormDTO extends LoginFormDTO {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
