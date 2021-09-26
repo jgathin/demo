@@ -15,6 +15,14 @@ public class Project {
 
     private Client client;
 
+    public Project(String orderNumber, String name, String description, List<Area> rooms, Client client) {
+        this.orderNumber = orderNumber;
+        this.name = name;
+        this.description = description;
+        this.rooms = rooms;
+        this.client = client;
+    }
+
     public Client getClient() {
         return client;
     }
